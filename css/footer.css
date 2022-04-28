@@ -26,14 +26,14 @@
   gap: 85px;
 }
 
-.footer-icons {
+.footer__icons {
   display: flex;
   gap: 26px;
   align-items: center;
   list-style: none;
 }
 
-.footer-icon {
+.footer__icon {
   display: block;
   width: 40px;
   height: 40px;
