@@ -1,0 +1,75 @@
+.sidebar {
+  width: 60vw;
+  height: 100vh;
+  display: none;
+  background-color: #fff;
+  padding: 40px;
+  transform: translate(-100%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease;
+  z-index: 200;
+}
+
+.sidebar h2 {
+  font-size: 32px;
+  font-family: Roboto, sans-serif;
+  color: var(--main-color);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.sidebar__inner nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.sidebar__inner .nav__link {
+  color: var(--text-first);
+}
+
+.sidebar__inner .search-icon {
+  padding: 5px;
+  box-sizing: content-box;
+}
+
+.sidebar__close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.sidebar__close-button::before,
+.sidebar__close-button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 6px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.sidebar__close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sidebar__close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (max-width: 540px) {
+  .sidebar {
+    width: 100vw;
+  }
+}

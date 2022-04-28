@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/first-section.css" />
+    <link rel="stylesheet" href="css/articles-section.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/donate.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar__inner">
+        <h2>WILDLIFE</h2>
+        <nav>
+          <ul>
+            <li class="nav__li">
+              <a
+                href="/"
+                class="nav__link scroll-link"
+                data-search="articles"
+                data-top="true"
+                >Articles</a
+              >
+            </li>
+            <li class="nav__li">
+              <a
+                href="/"
+                class="nav__link scroll-link"
+                data-search="contacts"
+                data-top="false"
+                >Contacts</a
+              >
+            </li>
+            <li class="nav__li">
+              <a class="search-icon button button_fill" href="/">
+                <img src="src/images/search-icon.svg" alt="search" />
+              </a>
+            </li>
+            <li class="nav__li">
+              <button class="button button_fill header__button">Sign In</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar__close-button"></div>
+    </div>
+    <div class="donate">
+      <h2>Donate</h2>
+      <div class="donate__form">
+        <form action="/donate">
+          <div class="donate__input-block">
+            <label for="name">Your name</label>
+            <input type="text" placeholder="Name" name="name" />
+          </div>
+          <div class="donate__input-block">
+            <label for="amount">Amount</label>
+            <input type="text" placeholder="1000$" name="amount" />
+          </div>
+          <div class="donate__textarea-container">
+            <label for="comment">Your comment:</label>
+            <textarea name="comment" cols="30" rows="10"></textarea>
+          </div>
+          <button type="submit" class="donate__button">Send</button>
+        </form>
+      </div>
+    </div>
+    <div class="backdrop"></div>
+    <section class="first-section">
+      <div class="container">
+        <div class="first-section__inner">
+          <header>
+            <div class="container">
+              <div class="header__inner">
+                <div class="logo">
+                  <div class="image-container">
+                    <img src="src/images/logo.svg" alt="logo" />
+                  </div>
+                  <span>WILDLIFE</span>
+                </div>
+                <nav>
+                  <ul>
+                    <li class="nav__li">
+                      <a
+                        href="/"
+                        class="nav__link scroll-link"
+                        data-search="articles"
+                        data-top="true"
+                        >Articles</a
+                      >
+                    </li>
+                    <li class="nav__li">
+                      <a
+                        href="/"
+                        class="nav__link scroll-link"
+                        data-search="contacts"
+                        data-top="false"
+                        >Contacts</a
+                      >
+                    </li>
+                    <li class="nav__li">
+                      <a
+                        class="search-icon scroll-link"
+                        href="/"
+                        data-search="contacts"
+                      >
+                        <img src="src/images/search-icon.svg" alt="search" />
+                      </a>
+                    </li>
+                    <li class="nav__li">
+                      <button class="button button_transparent header__button">
+                        Sign In
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="burger">
+                  <div class="burger__line" data-order="0"></div>
+                  <div class="burger__line" data-order="1"></div>
+                  <div class="burger__line" data-order="2"></div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="container">
+            <article>
+              <h1>Survival</h1>
+              <p>
+                What this means is that we exist to help protect our environment
+                and do in numbers of ways. You can save the planet by donation.
+              </p>
+              <button
+                class="button button_fill first-section__button"
+                id="donate-button"
+              >
+                Donate
+              </button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section class="articles-section" data-scroll="articles">
+        <header class="section__header">
+          <div class="container">
+            <h2>Latest Articles</h2>
+            <p>Breaking news from the wild</p>
+          </div>
+        </header>
+        <div class="container">
+          <div id="slider">
+            <button class="slider__control slider__control-left"></button>
+            <button class="slider__control slider__control-right"></button>
+            <div class="slider__view">
+              <div class="slider__wrapper">
+                <div class="slider__elements">
+                  <div class="slider__elem">
+                    <div class="content">
+                      <h4>Deer</h4>
+                      <p>Naturalist investigation</p>
+                    </div>
+                    <img src="src/images/deer.jpg" alt="deer" />
+                  </div>
+                  <div class="slider__elem">
+                    <div class="content">
+                      <h4>Squirrel</h4>
+                      <p>Kamikaze squirrels</p>
+                    </div>
+                    <img src="src/images/squirrel.jpg" alt="deer" />
+                  </div>
+                  <div class="slider__elem">
+                    <div class="content">
+                      <h4>Bird</h4>
+                      <p>Birds Fight club</p>
+                    </div>
+                    <img src="src/images/bird.jpg" alt="bird" />
+                  </div>
+                  <div class="slider__elem">
+                    <div class="content">
+                      <h4>Deer</h4>
+                      <p>Naturalist investigation</p>
+                    </div>
+                    <img src="src/images/deer.jpg" alt="deer" />
+                  </div>
+                  <div class="slider__elem">
+                    <div class="content">
+                      <h4>Squirrel</h4>
+                      <p>Kamikaze squirrels</p>
+                    </div>
+                    <img src="src/images/squirrel.jpg" alt="deer" />
+                  </div>
+                  <div class="slider__elem">
+                    <div class="content">
+                      <h4>Bird</h4>
+                      <p>Birds Fight club</p>
+                    </div>
+                    <img src="src/images/bird.jpg" alt="bird" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="get-notified">
+            <div class="get-notified__header">
+              <h3>Get notified about new amazing articles</h3>
+            </div>
+            <form action="/email">
+              <div class="form-block">
+                <input type="text" placeholder="Email" class="input-email" />
+                <input
+                  type="submit"
+                  value="Send"
+                  class="button button_fill input-submit"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer data-scroll="contacts">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__menu">
+            <div class="logo">
+              <div class="image-container">
+                <img src="src/images/logo.svg" alt="logo" />
+              </div>
+              <span>WILDLIFE</span>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                    class="nav__link scroll-link"
+                    data-search="articles"
+                    data-top="false"
+                    >Articles</a
+                  >
+                </li>
+                <li>
+                  <a href="/" class="nav__link">About us</a>
+                </li>
+                <li>
+                  <a href="/" class="nav__link">Learn more</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="footer-icons">
+              <li>
+                <a href="/" class="footer-icon facebook-icon"> </a>
+              </li>
+              <li>
+                <a href="/" class="footer-icon inst-icon"> </a>
+              </li>
+              <li>
+                <a href="/" class="footer-icon p-icon"> </a>
+              </li>
+              <li>
+                <a href="/" class="footer-icon telegram-icon"> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/articles-section.js"></script>
+    <script src="js/donate.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/backdrop.js"></script>
+  </body>
+</html>
