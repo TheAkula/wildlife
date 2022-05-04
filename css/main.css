@@ -116,6 +116,10 @@ h1 {
   white-space: nowrap;
 }
 
+.nav__link:hover {
+  color: var(--super-light-gray);
+}
+
 .header__button {
   width: 120px;
   height: 50px;

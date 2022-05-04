@@ -3,15 +3,27 @@ let elementWidth = 300;
 let curPosition = 0;
 let prevNum = 0;
 
-function checkPositionLeft() {
-  if (curPosition >= 0) {
-    leftControl.style.display = "none";
+function checkPositionLeft(newPosition = curPosition) {
+  if (newPosition > 0) {
+    return false;
   }
+  let newOpacity = 1;
+  if (newPosition === 0) {
+    newOpacity = window.innerWidth <= 420 ? 0.2 : 0;
+  }
+  leftControl.style.opacity = newOpacity;
+  return true;
 }
-function checkPositionRight() {
-  if (curPosition + wrapper.offsetWidth === slider.offsetWidth) {
-    rightControl.style.display = "none";
+function checkPositionRight(newPosition = curPosition) {
+  if (newPosition + wrapper.offsetWidth < slider.offsetWidth) {
+    return false;
   }
+  let newOpacity = 1;
+  if (newPosition + wrapper.offsetWidth === slider.offsetWidth) {
+    newOpacity = window.innerWidth <= 420 ? 0.2 : 0;
+  }
+  rightControl.style.opacity = newOpacity;
+  return true;
 }
 
 function resize() {
@@ -37,19 +49,23 @@ function resize() {
 }
 
 leftControl.onclick = (e) => {
-  rightControl.style.display = "block";
+  rightControl.style.opacity = "1";
   leftControl.disabled = false;
-  curPosition += elementWidth + gap;
-  checkPositionLeft();
-  wrapper.style.left = curPosition + "px";
+  let newPosition = curPosition + elementWidth + gap;
+  if (checkPositionLeft(newPosition)) {
+    curPosition += elementWidth + gap;
+    wrapper.style.left = curPosition + "px";
+  }
 };
 
 rightControl.onclick = (e) => {
-  leftControl.style.display = "block";
+  leftControl.style.opacity = "1";
   rightControl.disabled = false;
-  curPosition -= elementWidth + gap;
-  checkPositionRight();
-  wrapper.style.left = curPosition + "px";
+  let newPosition = curPosition - elementWidth - gap;
+  if (checkPositionRight(newPosition)) {
+    curPosition -= elementWidth + gap;
+    wrapper.style.left = curPosition + "px";
+  }
 };
 
 window.onresize = resize;
